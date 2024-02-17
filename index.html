@@ -1,11 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+        *{
+            font-family: "Inter", sans-serif;
+        }
+        .rale{
+            font-family: "Raleway", sans-serif;
+        }
+    </style>
+  </head>
+  <body>
+    <header class="w-10/12 mx-auto">
+      <nav class="my-10">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li class="text-lg"><a>Home</a></li>
+                <li class="text-lg"><a>About</a></li>
+                <li class="text-lg"><a>Destination</a></li>
+                <li class="text-lg"><a>Search</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-4xl">P-Ticket</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 space-x-3">
+              <li class="text-lg"><a>Home</a></li>
+              <li class="text-lg"><a>About</a></li>
+              <li class="text-lg"><a>Destination</a></li>
+              <li class="text-lg"><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn primary-col primary-bg text-xl font-bold"
+              >Bus
+              <img src="images/bus-icon.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </nav>
+      <section class="h-[550px] flex rounded-2xl flex-col justify-center text-white text-center bg-[url('./images/banner.png')] bg-no-repeat bg-center bg-cover pt-[70px]" >
+        <h1 class="text-6xl text-center rale leading-20 font-extrabold">
+          End-to-End Travel with <br />
+          <span class="primary-col">P Paribahan</span>
+        </h1>
+        <p class="mt-4 mb-8 w-4/6 mx-auto">Looking for great deals on bus tickets? We'll make it Shohoz for you! Get the lowest prices, and renowned bus operators - all in one place.</p>
+        <div>
+            <button class="btn bg-[#1DD100] border-0 text-xl mb-[135px]"><a href="#t">Buy Tickets</a></button>
+        </div>
+      </section>
+    </header>
+    <main>
+        <section id="t" class="w-10/12 mx-auto my-20">
+            <h1 class="mb-12 text-[40px] font-bold text-center">Best offers for you</h1>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div class="bg-[#FFBF0F] flex gap-4 h-[220px] rounded-xl">
+                    <div class="p-[30px] space-y-2">
+                        <h1 class="text-[40px] font-bold">15% OFF</h1>
+                        <p class="text-xl font-semibold">on your next purchase</p>
+                        <p class="text-[#03071266]">use by January 2024</p>
+                    </div>
+                    <div><img src="images/cupon-devider.png" class="h-full" alt=""></div>
+                    <div class="p-[20px] space-y-2 flex flex-col justify-center">
+                        <h1 class="text-3xl font-bold">NEW15</h1>
+                        <p class="text-[#03071266]">Coupon Code</p>
+                    </div>
+                </div>
+                <div class="bg-[#F78C9C] flex gap-4 h-[220px] rounded-xl">
+                    <div class="p-[30px] space-y-2">
+                        <h1 class="text-[40px] font-bold">20% OFF</h1>
+                        <p class="text-xl font-semibold">on your next purchase</p>
+                        <p class="text-[#03071266]">use by January 2024</p>
+                    </div>
+                    <div><img src="images/cupon-devider.png" class="h-full" alt=""></div>
+                    <div class="p-[20px] space-y-2 flex flex-col justify-center">
+                        <h1 class="text-3xl font-bold">Couple 20</h1>
+                        <p class="text-[#03071266]">Coupon Code</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="flex justify-center mt-[60px]">
+                <button class="btn primary-col text-lg bg-white border-[#1DD100]">See All Offers </button>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="js/index.js"></script>
+  </body>
 </html>

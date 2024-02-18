@@ -91,8 +91,11 @@ document.getElementById('apply').addEventListener('click', function(){
         const newG = valueG * 0.80;
         setElementById('grand-total', newG)
         input.style.display = 'none';
-        document.getElementById('apply').style.display = 'none'
+        document.getElementById('apply').style.display = 'none';
 
         
+    }
+    else{
+        alert('Invalid Discount');
     }
 })

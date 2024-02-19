@@ -73,9 +73,20 @@ document.getElementById('apply').addEventListener('click', function () {
     const input = document.getElementById('input-field');
     const inputValue = input.value;
     if (inputValue === 'NEW15') {
+        console.log('cl')
         
         const valueG = getIntValue('grand-total');
         const newG = valueG * 0.85;
+        const disG = valueG - newG;
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+        p1.innerText = 'Discount Price';
+        p2.innerText = 'BDT ' + disG;
+        p1.classList.add('font-semibold');
+        p2.classList.add('font-semibold');
+        document.getElementById('discount').appendChild(p1);
+        document.getElementById('discount').appendChild(p2);
+
         setElementById('grand-total', newG)
         input.style.display = 'none';
         document.getElementById('apply').style.display = 'none'
@@ -87,6 +98,15 @@ document.getElementById('apply').addEventListener('click', function () {
         
         const valueG = getIntValue('grand-total');
         const newG = valueG * 0.80;
+        const disG = valueG - newG;
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+        p1.innerText = 'Discount Price';
+        p2.innerText = 'BDT ' + disG;
+        p1.classList.add('font-semibold');
+        p2.classList.add('font-semibold');
+        document.getElementById('discount').appendChild(p1);
+        document.getElementById('discount').appendChild(p2);
         setElementById('grand-total', newG)
         input.style.display = 'none';
         document.getElementById('apply').style.display = 'none';

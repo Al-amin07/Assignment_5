@@ -25,7 +25,7 @@ for (let seat of seats) {
             const booked = getIntValue('booked-seat');
             const updateBooked = booked + 1;
             setElementById('booked-seat', updateBooked);
-            
+
 
             const p1 = document.createElement('p');
             const p2 = document.createElement('p');
@@ -43,10 +43,10 @@ for (let seat of seats) {
             const newTotal = total + 550;
             setElementById('total-tk', newTotal);
 
-           
+
             setElementById('grand-total', newTotal);
-            clickSeat.parentNode.setAttribute('disabled',true)
-            
+            clickSeat.parentNode.setAttribute('disabled', true)
+
         }
     })
 }
@@ -64,38 +64,53 @@ function getIntValue(elementId) {
     return parseFloat(elementText);
 }
 
-function getDiscount(elementId, dis){
+function getDiscount(elementId, dis) {
     const element = getIntValue(elementId);
     return element * dis;
 }
 
-document.getElementById('apply').addEventListener('click', function(){
+document.getElementById('apply').addEventListener('click', function () {
     const input = document.getElementById('input-field');
     const inputValue = input.value;
-    if(inputValue === 'NEW15'){
-        // const grandTotal = getDiscount('grand-total', 0.5);
-        // console.log(grandTotal)
+    if (inputValue === 'NEW15') {
+        
         const valueG = getIntValue('grand-total');
         const newG = valueG * 0.85;
         setElementById('grand-total', newG)
         input.style.display = 'none';
         document.getElementById('apply').style.display = 'none'
 
-        
+
     }
 
-    else if(inputValue === 'Couple 20'){
-        // const grandTotal = getDiscount('grand-total', 0.5);
-        // console.log(grandTotal)
+    else if (inputValue === 'Couple 20') {
+        
         const valueG = getIntValue('grand-total');
         const newG = valueG * 0.80;
         setElementById('grand-total', newG)
         input.style.display = 'none';
         document.getElementById('apply').style.display = 'none';
 
-        
+
     }
-    else{
+    else {
         alert('Invalid Discount');
     }
+})
+
+document.getElementById('number').addEventListener('keyup',function(){
+    const inputValue = document.getElementById('number');
+    const btn = document.getElementById('next');
+    if(inputValue.value !== ''){
+            btn.removeAttribute('disabled');
+    }
+
+})
+
+document.getElementById('next').addEventListener('click', function(){
+    const inputValue = document.getElementById('number');
+    inputValue.value = '';
+    
+    location.href = 'new.html';
+
 })

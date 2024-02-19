@@ -99,7 +99,7 @@
     </header>
     <main>
       <!-- 1st section -->
-      <section class="w-10/12 mx-auto my-20">
+      <section class="w-10/12 mx-auto my-20 ">
         <h1 class="mb-12 text-[40px] font-bold text-center">
           Best offers for you
         </h1>
@@ -140,7 +140,7 @@
         </div>
       </section>
       <!-- 2nd section -->
-      <section  class="bg-[#F7F8F8] text-center py-24">
+      <section  class="bg-[#F7F8F8] text-center py-24 ">
         <h1 class="text-[40px] font-bold">P.H Paribahan</h1>
         <p class="text w-4/6 mx-auto mb-12">
           A bus reservation system is a mobile or web software solution designed
@@ -345,14 +345,14 @@
             </div>
             <div class="mt-6">
               <p class="font-semibold mb-4">Phone Number*</p>
-              <input class="w-full pl-5 border-2 py-4 rounded-2xl" type="text" name="" id="" placeholder="Enter your phone number">
+              <input class="w-full pl-5 border-2 py-4 rounded-2xl" type="number" name="" id="number" placeholder="Enter your phone number">
             </div>
             <div class="mt-6">
               <p class="font-semibold mb-4">Email ID</p>
-              <input class="w-full pl-5 border-2 py-4 rounded-2xl" type="text" name="" id="" placeholder="Enter your email id">
+              <input class="w-full pl-5 border-2 py-4 rounded-2xl" type="email" name="" id="" placeholder="Enter your email id">
             </div>
 
-            <button class="btn bg-[#1DD100] font-extrabold text-xl my-8 w-full text-white">Next</button>
+            <button disabled id="next" class="btn  bg-[#1DD100] font-extrabold text-xl my-8 w-full text-white">Next</button>
             <div class="flex justify-center gap-6">
               <p class="text underline">Terms and Conditions</p>
               <p class="text underline">Cancellation Policy</p>
@@ -361,6 +361,7 @@
           
         </div>
       </section>
+      
     </main>
     <footer></footer>
     <script src="js/index.js"></script>
